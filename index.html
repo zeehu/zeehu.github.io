@@ -62,6 +62,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-python多进程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/22/python多进程/" class="article-date">
+  <time datetime="2018-08-22T15:43:00.000Z" itemprop="datePublished">2018-08-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/22/python多进程/">python多进程方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="为什么要使用多进程"><a href="#为什么要使用多进程" class="headerlink" title="为什么要使用多进程"></a>为什么要使用多进程</h2><p> 由于python GIL锁(Global Interpreter Lock)的原因，导致python多线程并没有明显的加速效果。</p>
+<h2 id="多进程使用方法"><a href="#多进程使用方法" class="headerlink" title="多进程使用方法"></a>多进程使用方法</h2><h3 id="Pool进程池"><a href="#Pool进程池" class="headerlink" title="Pool进程池"></a>Pool进程池</h3><ol>
+<li>map方法<br>比较适合大量数据进行简单的处理，如读取文件、并行计算等。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(data)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> data</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    t = time.time()</span><br><span class="line">    pool = Pool() <span class="comment">#可以通过Pool(num)指定进程数</span></span><br><span class="line">    datas = [ <span class="string">"AA"</span>, <span class="string">"BB"</span>, <span class="string">"CC"</span> ]</span><br><span class="line">    res = pool.map(run, datas)</span><br><span class="line">    pool.close()</span><br><span class="line">    pool.join()</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"并行执行时间："</span> + str(time.time() - t)</span><br><span class="line">    <span class="keyword">print</span> res</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/22/python多进程/" data-id="cjl5bsx2t00023cu3wof63yct" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/17/hello-world/" class="article-date">
@@ -97,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/17/hello-world/" data-id="cjkxop7yv00005eu3h3m3q77s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/17/hello-world/" data-id="cjl5bsx2h00003cu3totp7ugt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/09/mac使用hexo-github搭建博客/" data-id="cjkxop7z000015eu3ooguptwo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/09/mac使用hexo-github搭建博客/" data-id="cjl5bsx2l00013cu3kmsfh6kp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,6 +221,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/08/22/python多进程/">python多进程方法</a>
+          </li>
         
           <li>
             <a href="/2018/08/17/hello-world/">Hello World</a>
