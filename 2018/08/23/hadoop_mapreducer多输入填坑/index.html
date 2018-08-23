@@ -5,19 +5,19 @@
   
 
   
-  <title>Jezee&#39;s Blog</title>
+  <title>hadoop mapreducer 多输入配置 | Jezee&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:hadoop mapreducer 多输入配置为什么需要多输入使用MapReduce的时候经常需要加载词典或者配置数据 MapReduce文件分发配置参数 -file 将客户端本地文件上传到HDFS然后分发到计算节点 -cachefile 将HDFS文件分发到计算节点 -cacheArchive 将HDFS压缩文件分发到计算节点并解压，也可以指定符号链接 -files 将指定的本地/">
+  <meta name="description" content="为什么需要多输入使用MapReduce的时候经常需要加载词典或者配置数据 MapReduce文件分发配置参数 -file 将客户端本地文件上传到HDFS然后分发到计算节点 -cachefile 将HDFS文件分发到计算节点 -cacheArchive 将HDFS压缩文件分发到计算节点并解压，也可以指定符号链接 -files 将指定的本地/HDFS文件分发到各个task的工作目录下，部队文件进行任何">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jezee&#39;s Blog">
+<meta property="og:title" content="hadoop mapreducer 多输入配置">
 <meta property="og:url" content="http://yoursite.com/2018/08/23/hadoop_mapreducer多输入填坑/index.html">
 <meta property="og:site_name" content="Jezee&#39;s Blog">
-<meta property="og:description" content="title:hadoop mapreducer 多输入配置为什么需要多输入使用MapReduce的时候经常需要加载词典或者配置数据 MapReduce文件分发配置参数 -file 将客户端本地文件上传到HDFS然后分发到计算节点 -cachefile 将HDFS文件分发到计算节点 -cacheArchive 将HDFS压缩文件分发到计算节点并解压，也可以指定符号链接 -files 将指定的本地/">
+<meta property="og:description" content="为什么需要多输入使用MapReduce的时候经常需要加载词典或者配置数据 MapReduce文件分发配置参数 -file 将客户端本地文件上传到HDFS然后分发到计算节点 -cachefile 将HDFS文件分发到计算节点 -cacheArchive 将HDFS压缩文件分发到计算节点并解压，也可以指定符号链接 -files 将指定的本地/HDFS文件分发到各个task的工作目录下，部队文件进行任何">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-23T12:42:11.484Z">
+<meta property="og:updated_time" content="2018-08-23T13:11:46.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jezee&#39;s Blog">
-<meta name="twitter:description" content="title:hadoop mapreducer 多输入配置为什么需要多输入使用MapReduce的时候经常需要加载词典或者配置数据 MapReduce文件分发配置参数 -file 将客户端本地文件上传到HDFS然后分发到计算节点 -cachefile 将HDFS文件分发到计算节点 -cacheArchive 将HDFS压缩文件分发到计算节点并解压，也可以指定符号链接 -files 将指定的本地/">
+<meta name="twitter:title" content="hadoop mapreducer 多输入配置">
+<meta name="twitter:description" content="为什么需要多输入使用MapReduce的时候经常需要加载词典或者配置数据 MapReduce文件分发配置参数 -file 将客户端本地文件上传到HDFS然后分发到计算节点 -cachefile 将HDFS文件分发到计算节点 -cacheArchive 将HDFS压缩文件分发到计算节点并解压，也可以指定符号链接 -files 将指定的本地/HDFS文件分发到各个task的工作目录下，部队文件进行任何">
   
     <link rel="alternate" href="/atom.xml" title="Jezee&#39;s Blog" type="application/atom+xml">
   
@@ -74,10 +74,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hadoop mapreducer 多输入配置
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-hadoop-mapreducer-多输入配置"><a href="#title-hadoop-mapreducer-多输入配置" class="headerlink" title="title:hadoop mapreducer 多输入配置"></a>title:hadoop mapreducer 多输入配置</h2><h2 id="为什么需要多输入"><a href="#为什么需要多输入" class="headerlink" title="为什么需要多输入"></a>为什么需要多输入</h2><p>使用MapReduce的时候经常需要加载词典或者配置数据</p>
+        <h2 id="为什么需要多输入"><a href="#为什么需要多输入" class="headerlink" title="为什么需要多输入"></a>为什么需要多输入</h2><p>使用MapReduce的时候经常需要加载词典或者配置数据</p>
 <h2 id="MapReduce文件分发配置参数"><a href="#MapReduce文件分发配置参数" class="headerlink" title="MapReduce文件分发配置参数"></a>MapReduce文件分发配置参数</h2><ol>
 <li>-file 将客户端本地文件上传到HDFS然后分发到计算节点</li>
 <li>-cachefile 将HDFS文件分发到计算节点</li>
@@ -88,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/23/hadoop_mapreducer多输入填坑/" data-id="cjl6l4kit0000eiu3gop38pl7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/23/hadoop_mapreducer多输入填坑/" data-id="cjl6l6alu0000fcu3z556ntpj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,7 +110,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          bash时间处理
         
       </div>
     </a>
@@ -146,15 +155,15 @@
       <ul>
         
           <li>
-            <a href="/2018/08/23/shell/shell字符串处理/">(no title)</a>
+            <a href="/2018/08/23/shell/shell字符串处理/">shell字符串处理</a>
           </li>
         
           <li>
-            <a href="/2018/08/23/shell/shell时间处理/">(no title)</a>
+            <a href="/2018/08/23/shell/shell时间处理/">bash时间处理</a>
           </li>
         
           <li>
-            <a href="/2018/08/23/hadoop_mapreducer多输入填坑/">(no title)</a>
+            <a href="/2018/08/23/hadoop_mapreducer多输入填坑/">hadoop mapreducer 多输入配置</a>
           </li>
         
           <li>

@@ -5,19 +5,19 @@
   
 
   
-  <title>Jezee&#39;s Blog</title>
+  <title>bash时间处理 | Jezee&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:bash时间处理时间解析12date -d &quot;20180823&quot;date +&quot;%Y%m%d %H:%M:%S&quot; -d &quot;208-08-23 21:12:17&quot; #控制输出格式 时间运算123date -d &quot;+1 days&quot; #year/month/minutes/seconds适用date -d &quot;20180823 +1 days&quot; #20180824date -d &quot;$(date">
+  <meta name="description" content="时间解析12date -d &quot;20180823&quot;date +&quot;%Y%m%d %H:%M:%S&quot; -d &quot;208-08-23 21:12:17&quot; #控制输出格式 时间运算123date -d &quot;+1 days&quot; #year/month/minutes/seconds适用date -d &quot;20180823 +1 days&quot; #20180824date -d &quot;$(date +&quot;%Y%m%d&quot;) -1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jezee&#39;s Blog">
+<meta property="og:title" content="bash时间处理">
 <meta property="og:url" content="http://yoursite.com/2018/08/23/shell/shell时间处理/index.html">
 <meta property="og:site_name" content="Jezee&#39;s Blog">
-<meta property="og:description" content="title:bash时间处理时间解析12date -d &quot;20180823&quot;date +&quot;%Y%m%d %H:%M:%S&quot; -d &quot;208-08-23 21:12:17&quot; #控制输出格式 时间运算123date -d &quot;+1 days&quot; #year/month/minutes/seconds适用date -d &quot;20180823 +1 days&quot; #20180824date -d &quot;$(date">
+<meta property="og:description" content="时间解析12date -d &quot;20180823&quot;date +&quot;%Y%m%d %H:%M:%S&quot; -d &quot;208-08-23 21:12:17&quot; #控制输出格式 时间运算123date -d &quot;+1 days&quot; #year/month/minutes/seconds适用date -d &quot;20180823 +1 days&quot; #20180824date -d &quot;$(date +&quot;%Y%m%d&quot;) -1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-23T12:56:22.942Z">
+<meta property="og:updated_time" content="2018-08-23T13:11:46.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jezee&#39;s Blog">
-<meta name="twitter:description" content="title:bash时间处理时间解析12date -d &quot;20180823&quot;date +&quot;%Y%m%d %H:%M:%S&quot; -d &quot;208-08-23 21:12:17&quot; #控制输出格式 时间运算123date -d &quot;+1 days&quot; #year/month/minutes/seconds适用date -d &quot;20180823 +1 days&quot; #20180824date -d &quot;$(date">
+<meta name="twitter:title" content="bash时间处理">
+<meta name="twitter:description" content="时间解析12date -d &quot;20180823&quot;date +&quot;%Y%m%d %H:%M:%S&quot; -d &quot;208-08-23 21:12:17&quot; #控制输出格式 时间运算123date -d &quot;+1 days&quot; #year/month/minutes/seconds适用date -d &quot;20180823 +1 days&quot; #20180824date -d &quot;$(date +&quot;%Y%m%d&quot;) -1">
   
     <link rel="alternate" href="/atom.xml" title="Jezee&#39;s Blog" type="application/atom+xml">
   
@@ -74,16 +74,25 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      bash时间处理
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-bash时间处理"><a href="#title-bash时间处理" class="headerlink" title="title:bash时间处理"></a>title:bash时间处理</h2><h2 id="时间解析"><a href="#时间解析" class="headerlink" title="时间解析"></a>时间解析</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date -d <span class="string">"20180823"</span></span><br><span class="line">date +<span class="string">"%Y%m%d %H:%M:%S"</span> -d <span class="string">"208-08-23 21:12:17"</span> <span class="comment">#控制输出格式</span></span><br></pre></td></tr></table></figure>
+        <h2 id="时间解析"><a href="#时间解析" class="headerlink" title="时间解析"></a>时间解析</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date -d <span class="string">"20180823"</span></span><br><span class="line">date +<span class="string">"%Y%m%d %H:%M:%S"</span> -d <span class="string">"208-08-23 21:12:17"</span> <span class="comment">#控制输出格式</span></span><br></pre></td></tr></table></figure>
 <h2 id="时间运算"><a href="#时间运算" class="headerlink" title="时间运算"></a>时间运算</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">date -d <span class="string">"+1 days"</span> <span class="comment">#year/month/minutes/seconds适用</span></span><br><span class="line">date -d <span class="string">"20180823 +1 days"</span> <span class="comment">#20180824</span></span><br><span class="line">date -d <span class="string">"<span class="variable">$(date +"%Y%m%d")</span> -1 days"</span> <span class="comment">#一天前</span></span><br></pre></td></tr></table></figure>
 <h2 id="时间转换"><a href="#时间转换" class="headerlink" title="时间转换"></a>时间转换</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date --date @<span class="string">"1535028646"</span> <span class="comment">#从1970-01-01 00：00：00开始计秒</span></span><br><span class="line">date +<span class="string">"%s"</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/23/shell/shell时间处理/" data-id="cjl6l4kjf0005eiu3tcoiodwb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/23/shell/shell时间处理/" data-id="cjl6l6amf0004fcu3juhtptvd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -96,7 +105,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          shell字符串处理
         
       </div>
     </a>
@@ -104,7 +113,7 @@
   
     <a href="/2018/08/23/hadoop_mapreducer多输入填坑/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">hadoop mapreducer 多输入配置</div>
     </a>
   
 </nav>
@@ -141,15 +150,15 @@
       <ul>
         
           <li>
-            <a href="/2018/08/23/shell/shell字符串处理/">(no title)</a>
+            <a href="/2018/08/23/shell/shell字符串处理/">shell字符串处理</a>
           </li>
         
           <li>
-            <a href="/2018/08/23/shell/shell时间处理/">(no title)</a>
+            <a href="/2018/08/23/shell/shell时间处理/">bash时间处理</a>
           </li>
         
           <li>
-            <a href="/2018/08/23/hadoop_mapreducer多输入填坑/">(no title)</a>
+            <a href="/2018/08/23/hadoop_mapreducer多输入填坑/">hadoop mapreducer 多输入配置</a>
           </li>
         
           <li>
