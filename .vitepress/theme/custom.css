@@ -1,0 +1,29 @@
+/* Custom CSS for VitePress */
+
+:root {
+  /* Change background color */
+  --vp-c-bg: #f9f9f9;
+}
+
+body {
+  /* Add a subtle gradient background */
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  background-attachment: fixed;
+}
+
+/* Style for post excerpts on the homepage */
+.excerpt {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.excerpt p {
+  margin: 0;
+}
+
+/* Add a bottom border to main article titles for better separation */
+.vp-doc h1 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
