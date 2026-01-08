@@ -1,4 +1,8 @@
-# 解决 VSCode 容器开发中的网络难题：自动代理与内网直连方案
+---
+title: 解决 VSCode 容器开发中的网络难题：自动代理与内网直连方案
+date: 2026-01-08
+description: 在 Windows (WSL2 / Docker Desktop) 环境下使用 VSCode Dev Containers 进行开发时，解决外网代理与内网直连冲突的终极方案。
+---
 
 ## 1. 痛点描述
 
