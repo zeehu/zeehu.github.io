@@ -4,6 +4,7 @@ import { resolve } from 'path'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  srcExclude: ['GEMINI.md'],
   title: "Jezee's Blog",
   description: "A personal blog rebuilt with VitePress.",
   
