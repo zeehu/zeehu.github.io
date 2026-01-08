@@ -3,8 +3,6 @@ title: mac使用hexo+github搭建博客
 date: 2018-08-09
 ---
 
-# mac使用hexo+github搭建博客
-
 ## 准备
 
 ### 创建Github Repo

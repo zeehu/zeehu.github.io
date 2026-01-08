@@ -3,8 +3,6 @@ title: hadoop mapreducer 多输入配置
 date: 2018-08-23
 ---
 
-# hadoop mapreducer 多输入配置
-
 ## 为什么需要多输入
 
 使用MapReduce的时候经常需要加载词典或者配置数据

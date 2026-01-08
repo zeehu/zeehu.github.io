@@ -1,11 +1,12 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import { onMounted, watch } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, useData } from 'vitepress'
 import Giscus from './Giscus.vue' // Import Giscus
 
 const { Layout } = DefaultTheme
 const route = useRoute()
+const { frontmatter } = useData()
 
 // This function will only be called on the client
 const setupBusuanzi = () => {
@@ -35,9 +36,14 @@ onMounted(() => {
 
 <template>
   <Layout>
+    <!-- Slot for page title -->
+    <template #doc-before>
+      <h1 v-if="frontmatter.title && frontmatter.layout !== 'home'" class="page-title">{{ frontmatter.title }}</h1>
+    </template>
+
     <!-- Slot for per-page view count -->
     <template #doc-footer-before>
-      <div class="doc-footer-busuanzi" style="margin-top: 2rem; text-align: center; color: #888; font-size: 0.9em;">
+      <div class="doc-footer-busuanzi">
         <span id="busuanzi_container_page_pv">
           本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </span>
@@ -51,7 +57,7 @@ onMounted(() => {
 
     <!-- Slot for site-wide stats in the footer -->
     <template #layout-bottom>
-        <div class="site-footer-busuanzi" style="border-top: 1px solid #eee; margin-top: 2rem; padding: 2rem 0; text-align: center; color: #888; font-size: 0.9em;">
+        <div class="site-footer-busuanzi">
             <span id="busuanzi_container_site_pv">
                 本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
             </span>

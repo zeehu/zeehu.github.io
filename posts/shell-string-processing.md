@@ -3,8 +3,6 @@ title: shell字符串处理
 date: 2018-08-23
 ---
 
-# shell字符串处理
-
 ## 常用shell字符串处理方法
 
 1. `${var#*string}`  从左向右截取var最后一个string后的字符串

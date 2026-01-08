@@ -12,7 +12,7 @@ const giscusTheme = computed(() => {
 </script>
 
 <template>
-  <div style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2rem;">
+  <div class="giscus-wrapper">
     <component
       :is="'script'"
       src="https://giscus.app/client.js"

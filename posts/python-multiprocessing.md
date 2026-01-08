@@ -3,8 +3,6 @@ title: python多进程方法
 date: 2018-08-22
 ---
 
-# python多进程方法
-
 ## 为什么要使用多进程
 
 由于python GIL锁(Global Interpreter Lock)的原因，导致python多线程并没有明显的加速效果。
