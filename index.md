@@ -1,3 +1,5 @@
+# Jezee's Blog
+
 <script setup>
 import { data as posts } from './.vitepress/posts.data.ts'
 </script>
